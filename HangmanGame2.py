@@ -65,7 +65,7 @@ def guess(word="code"):
 #     w = input("Please enter a word to guess:\n>>")
 # os.system("clear")
 # print("===Hangman Game===")
-#input("Are you ready?\nClick the enter key to start! ")
+# input("Are you ready?\nClick the enter key to start! ")
 # guess(w)
 
 # otherwise just put the word into the brackets of the guess function:
