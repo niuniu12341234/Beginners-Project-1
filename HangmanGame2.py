@@ -29,14 +29,13 @@ def guess(word="code"):
             print("Nope\nHe died RIP:(")
             break
         letter = input("Guess a letter: ")
-        letter = letter.lower()
-        while letter in guessed or letter in current:
+        while letter.lower() in guessed or letter.lower() in current:
             print("You've already guessed that!")
             letter = input("Guess a letter: ")
         while not letter.isalpha() or len(letter) > 1:
             print("Invaild input.")
             letter = input("Guess a letter: ")
-            letter = letter.lower()
+        letter = letter.lower()
         times = 0
         for n in word:
             if n != letter:
