@@ -29,12 +29,14 @@ def guess(word="code"):
             print("Nope\nHe died RIP:(")
             break
         letter = input("Guess a letter: ")
+        letter = letter.lower()
         while letter in guessed or letter in current:
             print("You've already guessed that!")
             letter = input("Guess a letter: ")
         while not letter.isalpha() or len(letter) > 1:
             print("Invaild input.")
             letter = input("Guess a letter: ")
+            letter = letter.lower()
         times = 0
         for n in word:
             if n != letter:
@@ -56,7 +58,7 @@ def guess(word="code"):
         print("You got it!!")
     print("The word was:",word)
 
-# if you want another person to give you the word use the code below: (from line60 to line69)
+# if you want another person to give you the word use the code below(from line61 to line70):
 # os.system("clear")
 # print("===Hangman Game===")
 # w = input("Enter a word to guess:\n>>")
