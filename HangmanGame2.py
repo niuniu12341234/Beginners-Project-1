@@ -30,7 +30,7 @@ def guess(word="code"):
             break
         letter = input("Guess a letter: ")
         while letter in guessed or letter in current:
-            print("You've already got it!")
+            print("You've already guessed that!")
             letter = input("Guess a letter: ")
         while not letter.isalpha() or len(letter) > 1:
             print("Invaild input.")
