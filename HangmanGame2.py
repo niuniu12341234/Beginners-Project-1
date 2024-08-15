@@ -70,4 +70,4 @@ def guess(word="code"):
 # guess(w)
 
 # otherwise just put the word into the brackets of the guess function:
-guess("excellent")
+guess("rainbow")
