@@ -32,7 +32,7 @@ def guess(word="code"):
         while letter in guessed or letter in current:
             print("You've already got it!")
             letter = input("Guess a letter: ")
-        while len(letter) > 1 or not letter.isalpha():
+        while not letter.isalpha() or len(letter) > 1:
             print("Invaild input.")
             letter = input("Guess a letter: ")
         times = 0
@@ -53,6 +53,20 @@ def guess(word="code"):
         print(HMpics[count])
         print(current)
         print("Letters guessed:",", ".join(guessed))
-        print("You got it!")
+        print("You got it!!")
     print("The word was:",word)
+
+# if you want another person to give you the word use the code below: (from line60 to line69)
+# os.system("clear")
+# print("===Hangman Game===")
+# w = input("Enter a word to guess:\n>>")
+# while not w.isalpha() or len(w) <= 1:
+#     print("Invaild input.")
+#     w = input("Please enter a word to guess:\n>>")
+# os.system("clear")
+# print("===Hangman Game===")
+#input("Are you ready?\nClick the enter key to start! ")
+# guess(w)
+
+# otherwise just put the word into the brackets of the guess function:
 guess("excellent")
